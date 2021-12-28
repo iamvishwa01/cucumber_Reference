@@ -13,6 +13,7 @@ public LoginObj(WebDriver driver){
     By username = By.id("Email");
     By password = By.id("Password");
     By submit = By.xpath("//button[@type='submit']");
+    By logout = By.xpath("//*[contains(text(),'Logout')]");
     public WebElement setUsername(){
         return driver.findElement(username);
     }
@@ -22,5 +23,7 @@ public LoginObj(WebDriver driver){
     public WebElement ClickLogin(){
         return driver.findElement(submit);
     }
-
+    public WebElement Logout(){
+        return driver.findElement(logout);
+    }
 }
