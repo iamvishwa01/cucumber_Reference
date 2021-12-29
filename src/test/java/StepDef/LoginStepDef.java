@@ -17,12 +17,12 @@ public class LoginStepDef extends BaseClass{
     driver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
     }
     @When("User login with username {string} and password {string}")
-    public void user_login_with_username_and_password(String Username, String Password) {
+    public void user_login_with_username_and_password(String username, String password) {
     l1 = new LoginObj(driver);
     l1.setUsername().clear();
     l1.SetPassword().clear();
-    l1.setUsername().sendKeys(Username);
-        l1.SetPassword().sendKeys(Password);
+    l1.setUsername().sendKeys(username);
+        l1.SetPassword().sendKeys(password);
 
     }
     @When("Clicked on Login page")
